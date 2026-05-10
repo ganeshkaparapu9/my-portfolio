@@ -2,9 +2,9 @@ import type { SiteConfig } from "@/types/portfolio";
 
 export const siteConfig: SiteConfig = {
   name: "Ganesh Kaparapu",
-  title: "Ganesh Kaparapu — Portfolio",
+  title: "Ganesh Kaparapu - Senior Full Stack Developer",
   description:
-    "Full-stack developer portfolio showcasing projects, skills, and experience.",
+    "Portfolio of Ganesh Kaparapu, Senior Full Stack Developer with 10 years of experience building scalable enterprise SaaS and AI-integrated applications.",
   url: "https://ganeshkaparapu.dev",
   socials: [
     {
