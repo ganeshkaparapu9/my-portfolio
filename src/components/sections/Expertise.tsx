@@ -26,19 +26,16 @@ const expertiseData = [
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+    },
+  }),
 };
 
 export function Expertise() {
@@ -50,17 +47,15 @@ export function Expertise() {
           <div className="h-1 w-20 bg-foreground rounded-full" />
         </div>
 
-        <motion.div
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {expertiseData.map((category) => (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {expertiseData.map((category, index) => (
             <motion.div
               key={category.title}
+              custom={index}
               variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
               className="group relative flex flex-col rounded-2xl border border-border bg-background p-6 shadow-sm transition-all hover:shadow-md hover:border-foreground/20"
             >
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-muted text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
@@ -77,7 +72,7 @@ export function Expertise() {
               </ul>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

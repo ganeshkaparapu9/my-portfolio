@@ -1,4 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ganesh Kaparapu - Professional Portfolio
+
+A modern, fast, and responsive single-page portfolio built to showcase experience in scalable enterprise SaaS and modern AI-integrated web applications.
+
+## Tech Stack & Dependencies
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **UI Architecture**: Component-based approach adhering to clean code principles, separating layout elements from individual page sections.
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install` (or `yarn install` / `pnpm install`)
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Getting Started
 

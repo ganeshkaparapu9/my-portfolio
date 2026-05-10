@@ -8,7 +8,7 @@ const projectsData = [
     title: "AI-Driven Chat Application",
     type: "AI & Modern Stack",
     description: "A Next.js Proof of Concept (POC) implementing a robust RAG (Retrieval-Augmented Generation) pipeline. Designed to provide context-aware responses by integrating local LLMs like Ollama and Qwen, demonstrating advanced AI capabilities in a modern web interface.",
-    tags: ["Next.js", "RAG Pipeline", "Local LLM", "Ollama"]
+    tags: ["Next.js", "RAG Pipeline", "NVIDIA free services", ""]
   },
   {
     title: "Turbify Modernization",
@@ -56,7 +56,7 @@ export function Projects() {
                   {project.description}
                 </p>
               </div>
-              
+
               <div>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map(tag => (
