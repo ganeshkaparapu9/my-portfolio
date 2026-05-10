@@ -2,30 +2,7 @@
 
 import ExperienceItem from "./ExperienceItem";
 
-const experienceData = [
-  {
-    company: "Infinite Computer Solutions",
-    role: "Senior Software Engineer",
-    period: "2021 - Present",
-    description: [
-      "Lead development on the Turbify SaaS platform, improving scalability and user experience for modern web applications.",
-      "Spearheaded performance optimization initiatives, implementing Redis caching to reduce latency and improve load times by over 40%.",
-      "Resolved critical X-ray security vulnerabilities, ensuring robust protection and adherence to enterprise compliance standards.",
-      "Architected responsive and highly scalable microservices architecture to support large user bases."
-    ]
-  },
-  {
-    company: "IBM India",
-    role: "Senior Software Engineer / Software Engineer",
-    period: "2016 - 2021",
-    description: [
-      "Key contributor to the 'Onboard' Talent Management project serving high-profile global clients including Best Buy, Disney, and FedEx.",
-      "Led the complete architectural rewrite of legacy applications into a modern stack utilizing React for the frontend and Java/Spring Boot for backend microservices.",
-      "Implemented seamless RESTful APIs and ensured high code quality through comprehensive testing and CI/CD pipelines.",
-      "Mentored junior developers and established best practices for frontend state management and component reusability."
-    ]
-  }
-];
+import { experienceData } from "@/lib/data";
 
 export function Experience() {
   return (

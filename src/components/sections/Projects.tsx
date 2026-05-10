@@ -3,26 +3,7 @@
 import { motion } from "framer-motion";
 import { FolderGit2, ArrowRight } from "lucide-react";
 
-const projectsData = [
-  {
-    title: "AI-Driven Chat Application",
-    type: "AI & Modern Stack",
-    description: "A Next.js Proof of Concept (POC) implementing a robust RAG (Retrieval-Augmented Generation) pipeline. Designed to provide context-aware responses by integrating local LLMs like Ollama and Qwen, demonstrating advanced AI capabilities in a modern web interface.",
-    tags: ["Next.js", "RAG Pipeline", "NVIDIA free services", ""]
-  },
-  {
-    title: "Turbify Modernization",
-    type: "Enterprise SaaS",
-    description: "Led the comprehensive revamping of legacy UI components into a modern React-based architecture. A critical aspect of this project was maintaining strict GDPR and data protection compliance throughout the modernization process.",
-    tags: ["React", "UI/UX", "GDPR", "SaaS"]
-  },
-  {
-    title: "Acclator",
-    type: "Mobile App",
-    description: "An innovative Android application developed for accent training and language improvement. Successfully integrated Google Speech APIs to provide real-time voice analysis and feedback to users.",
-    tags: ["Android", "Google Speech API", "Mobile"]
-  }
-];
+import { projectsData } from "@/lib/data";
 
 export function Projects() {
   return (

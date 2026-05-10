@@ -1,30 +1,7 @@
 "use client";
 
-import { Layout, Server, Cpu, Database } from "lucide-react";
 import ExpertiseItem from "./ExpertiseItem";
-
-const expertiseData = [
-  {
-    title: "Frontend",
-    icon: <Layout className="h-6 w-6" />,
-    skills: ["Next.js (App Router)", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Handlebars.js"],
-  },
-  {
-    title: "Backend & Cloud",
-    icon: <Server className="h-6 w-6" />,
-    skills: ["Node.js", "Express", "Java/Spring", "AWS (EC2, S3, DynamoDB, AppConfig)", "Azure"],
-  },
-  {
-    title: "AI Stack",
-    icon: <Cpu className="h-6 w-6" />,
-    skills: ["RAG Pipelines", "Local LLM Integration (Ollama, Qwen)", "AI Chat POCs"],
-  },
-  {
-    title: "Database & DevOps",
-    icon: <Database className="h-6 w-6" />,
-    skills: ["SQL", "Redis", "Docker", "Jenkins", "CI/CD", "X-ray Security"],
-  },
-];
+import { expertiseData } from "@/lib/data";
 
 // Variants are now inside ExpertiseItem
 
