@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
-  const emailParts = ["Ganesh.Kaparapu", "infinite.com"];
+  const emailParts = ["ganeshkaparapu9", "gmail.com"];
 
   useEffect(() => {
     // Construct email only on the client side to avoid basic bots
@@ -21,7 +21,7 @@ export function Footer() {
             I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <a
             href={email ? `mailto:${email}` : "#"}
