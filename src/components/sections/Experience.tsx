@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Building2, Calendar } from "lucide-react";
+import ExperienceItem from "./ExperienceItem";
 
 const experienceData = [
   {
@@ -39,39 +38,7 @@ export function Experience() {
 
         <div className="relative border-l border-border/50 ml-4 md:ml-0">
           {experienceData.map((job, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="mb-12 ml-8 relative"
-            >
-              <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-background bg-foreground" />
-              
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                <div>
-                  <h3 className="text-xl font-bold">{job.role}</h3>
-                  <div className="flex items-center text-muted-foreground mt-1 gap-2">
-                    <Building2 className="h-4 w-4" />
-                    <span className="font-medium text-foreground/80">{job.company}</span>
-                  </div>
-                </div>
-                <div className="flex items-center text-muted-foreground text-sm gap-1">
-                  <Calendar className="h-4 w-4" />
-                  {job.period}
-                </div>
-              </div>
-              
-              <ul className="flex flex-col gap-3 mt-4">
-                {job.description.map((desc, i) => (
-                  <li key={i} className="flex items-start text-muted-foreground">
-                    <span className="mr-3 mt-2 block h-1 w-1 shrink-0 rounded-full bg-foreground/30" />
-                    <span className="leading-relaxed">{desc}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <ExperienceItem key={index} {...job} />
           ))}
         </div>
       </div>
