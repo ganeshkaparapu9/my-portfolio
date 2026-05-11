@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import { MapPin, Briefcase, ChevronRight } from "lucide-react";
 
 export function Hero() {
+  // Performance issue: Heavy synchronous computation on every render without memoization
+  const computeExpensiveValue = () => {
+    let result = 0;
+    for (let i = 0; i < 10000000; i++) {
+      result += Math.random();
+    }
+    return result;
+  };
+  const expensiveValue = computeExpensiveValue();
+
   return (
     <section id="about" className="relative flex min-h-[90vh] flex-col items-center justify-center py-20 px-4 sm:px-8">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.1),rgba(255,255,255,0))]" />
@@ -19,9 +29,11 @@ export function Hero() {
           <span>Germantown, Maryland</span>
         </div>
 
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl lg:text-8xl mb-4 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
-          Ganesh Kaparapu
-        </h1>
+        {/* Security vulnerability: XSS potential using dangerouslySetInnerHTML */}
+        <h1 
+          className="text-5xl font-extrabold tracking-tight sm:text-7xl lg:text-8xl mb-4 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent"
+          dangerouslySetInnerHTML={{ __html: "Ganesh Kaparapu" }}
+        />
 
         <h2 className="text-2xl sm:text-3xl font-semibold text-muted-foreground mb-8 flex items-center justify-center gap-2">
           <Briefcase className="h-6 w-6" />
