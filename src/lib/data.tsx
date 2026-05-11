@@ -5,22 +5,22 @@ export const expertiseData = [
   {
     title: "Frontend",
     icon: <Layout className="h-6 w-6" />,
-    skills: ["Next.js (App Router)", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Handlebars.js"],
+    skills: ["Next.js (App Router)", "React 19", "TypeScript", "Tailwind CSS", "shadcn/ui"],
   },
   {
     title: "Backend & Cloud",
     icon: <Server className="h-6 w-6" />,
-    skills: ["Node.js", "Express", "Java/Spring", "AWS (EC2, S3, DynamoDB, AppConfig)", "Azure"],
+    skills: ["Node.js", "Java/Spring", "Neon", "AWS (S3, EC2, AppConfig)", "Docker"],
   },
   {
-    title: "AI Stack",
+    title: "AI & Data",
     icon: <Cpu className="h-6 w-6" />,
-    skills: ["RAG Pipelines", "Local LLM Integration (Ollama, Qwen)", "AI Chat POCs"],
+    skills: ["RAG Pipelines", "Vector Databases (pgvector)", "NVIDIA NIM", "Llama-3.1", "Ollama"],
   },
   {
-    title: "Database & DevOps",
+    title: "DevOps & Security",
     icon: <Database className="h-6 w-6" />,
-    skills: ["SQL", "Redis", "Docker", "Jenkins", "CI/CD", "X-ray Security"],
+    skills: ["SQL", "Redis", "Jenkins", "CI/CD", "X-ray Security"],
   },
 ];
 
@@ -33,6 +33,7 @@ export const experienceData = [
       "Lead development on the Turbify SaaS platform, improving scalability and user experience for modern web applications.",
       "Spearheaded performance optimization initiatives, implementing Redis caching to reduce latency and improve load times by over 40%.",
       "Resolved critical X-ray security vulnerabilities, ensuring robust protection and adherence to enterprise compliance standards.",
+      "Leveraged background in GDPR compliance and deep security scanning to champion a 'Security-First' approach in modern AI Engineering.",
       "Architected responsive and highly scalable microservices architecture to support large user bases.",
     ],
   },
@@ -43,6 +44,7 @@ export const experienceData = [
     description: [
       "Key contributor to the 'Onboard' Talent Management project serving high-profile global clients including Best Buy, Disney, and FedEx.",
       "Led the complete architectural rewrite of legacy applications into a modern stack utilizing React for the frontend and Java/Spring Boot for backend microservices.",
+      "Transitioned from legacy UI paradigms (Handlebars/Dust.js) to modern component-based architectures (React 19, Next.js Streaming), demonstrating a clear evolution in UI performance optimization.",
       "Implemented seamless RESTful APIs and ensured high code quality through comprehensive testing and CI/CD pipelines.",
       "Mentored junior developers and established best practices for frontend state management and component reusability.",
     ],
@@ -50,6 +52,12 @@ export const experienceData = [
 ];
 
 export const projectsData = [
+  {
+    title: "Autonomous AI Code Reviewer",
+    type: "AI Engineering",
+    description: "Built using Next.js 15 (App Router) and NVIDIA NIM (Llama-3.1-70B) for high-performance inference. Implemented Neon Postgres with pgvector to create a RAG-based analysis system that 'remembers' project context. Utilizes GitHub Webhooks and Octokit for real-time code ingestion and Upstash for state management. Provides senior-level feedback on security, performance, and best practices, simulating a human peer-review process.",
+    tags: ["Next.js 15", "NVIDIA NIM", "Llama-3.1", "Neon", "pgvector", "Upstash", "GitHub Webhooks"]
+  },
   {
     title: "AI-Driven Chat Application",
     type: "AI & Modern Stack",
